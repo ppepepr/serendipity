@@ -61,6 +61,7 @@ let selectedScience = null;
 function showScreen(name){
   Object.values(screens).forEach(s => s.classList.remove("active"));
   screens[name].classList.add("active");
+  window.scrollTo(0, 0);
 }
 
 // populate choice buttons
