@@ -18,11 +18,24 @@ html,body{height:100%; margin:0; background:var(--bg);}
 }
 
 /* screens */
-.screen{ display:none; text-align:center; padding:28px; }
-.screen.active{ display:block; }
+.screen {
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+  padding: 28px;
+  transition: opacity 0.6s ease;
+}
+
+.screen.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 
 h1{ font-size:28px; margin:8px 0; color:#111827; }
 .subtitle{ color:var(--muted); margin-bottom:20px; }
+h2{ color:#111827; margin-bottom:18px; }
+
 /* start screen title refinement */
 #start-screen .title {
   font-size: 2.8rem;
@@ -41,7 +54,6 @@ h1{ font-size:28px; margin:8px 0; color:#111827; }
   margin-bottom: 20px;
 }
 
-h2{ color:#111827; margin-bottom:18px; }
 
 /* buttons */
 button{
