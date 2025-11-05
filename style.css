@@ -1,0 +1,88 @@
+:root{
+  --bg: #f7f8fb;
+  --card: #ffffff;
+  --accent: #5b6bff;
+  --muted: #6b7280;
+  --shadow: 0 6px 18px rgba(33,33,33,0.08);
+  --radius: 12px;
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+*{box-sizing: border-box;}
+html,body{height:100%; margin:0; background:var(--bg);}
+.container{
+  max-width:900px;
+  margin:40px auto;
+  padding:28px;
+  background:transparent;
+}
+
+/* screens */
+.screen{ display:none; text-align:center; padding:28px; }
+.screen.active{ display:block; }
+
+h1{ font-size:28px; margin:8px 0; color:#111827; }
+.subtitle{ color:var(--muted); margin-bottom:20px; }
+h2{ color:#111827; margin-bottom:18px; }
+
+/* buttons */
+button{
+  border: none;
+  border-radius: 10px;
+  padding:10px 16px;
+  font-size:15px;
+  cursor:pointer;
+}
+.outline-btn{
+  background:transparent;
+  color:var(--accent);
+  border: 2px solid var(--accent);
+  font-weight:600;
+}
+.secondary-btn{
+  background:#eef2ff;
+  color:var(--accent);
+  border: none;
+  padding:10px 14px;
+}
+.choices{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  justify-content:center;
+  margin-bottom:24px;
+}
+.choice-btn{
+  min-width:140px;
+  padding:12px 14px;
+  background:var(--card);
+  box-shadow: var(--shadow);
+  border-radius:10px;
+  font-weight:600;
+  color:#111827;
+  transition: transform .12s ease, box-shadow .12s;
+}
+.choice-btn:hover{ transform: translateY(-4px); box-shadow: 0 10px 28px rgba(33,33,33,0.12); }
+.choice-btn.selected{ outline: 3px solid rgba(91,107,255,0.12); transform:none; }
+
+/* result */
+.result-card{
+  background:var(--card);
+  padding:22px;
+  border-radius:14px;
+  box-shadow: var(--shadow);
+  min-height:120px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+#result-text{ font-size:16px; color:#111827; line-height:1.5; margin:0; padding:0 8px; }
+
+/* layout */
+.row{ display:flex; gap:12px; justify-content:center; margin-top:18px; }
+
+/* responsive */
+@media(max-width:520px){
+  .choice-btn{ min-width:120px; font-size:14px; }
+  .container{ padding:16px; margin:20px; }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Serendipity Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <!-- Start screen -->
+    <section id="start-screen" class="screen active">
+      <h1>The Serendipity Generator</h1>
+      <p class="subtitle">An Algorithmic Approach to Ideation</p>
+      <button id="start-btn" class="outline-btn">Start</button>
+    </section>
+
+    <!-- Choose everyday keyword -->
+    <section id="everyday-screen" class="screen">
+      <h2>Choose one everyday field</h2>
+      <div class="choices" id="everyday-choices">
+        <!-- buttons will be injected -->
+      </div>
+      <button id="everyday-back" class="secondary-btn">Back</button>
+    </section>
+
+    <!-- Choose science keyword -->
+    <section id="science-screen" class="screen">
+      <h2>Choose one scientific field</h2>
+      <div class="choices" id="science-choices">
+        <!-- buttons will be injected -->
+      </div>
+      <div class="row">
+        <button id="science-back" class="secondary-btn">Back</button>
+      </div>
+    </section>
+
+    <!-- Result screen -->
+    <section id="result-screen" class="screen">
+      <h2>Serendipity Idea</h2>
+      <div class="result-card" id="result-card">
+        <p id="result-text"></p>
+      </div>
+      <div class="row">
+        <button id="again-btn" class="outline-btn">Try Another Science</button>
+        <button id="home-btn" class="secondary-btn">Home</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
