@@ -122,3 +122,10 @@ button{
   display: block;
 }
 
+@media (max-width: 520px) {
+  .result-image {
+    max-width: 90%;
+    max-height: 240px;
+  }
+}
+
