@@ -25,6 +25,31 @@ h1{ font-size:28px; margin:8px 0; color:#111827; }
 .subtitle{ color:var(--muted); margin-bottom:20px; }
 h2{ color:#111827; margin-bottom:18px; }
 
+/* how it works */
+.how-it-works {
+  text-align: left;
+  max-width: 600px;
+  margin: 20px auto 30px; /* subtitle 아래, 버튼 위 */
+  color: var(--muted);
+}
+
+.how-it-works h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.how-it-works ol {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.how-it-works li {
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+
 /* buttons */
 button{
   border: none;
