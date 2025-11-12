@@ -86,3 +86,11 @@ button{
   .choice-btn{ min-width:120px; font-size:14px; }
   .container{ padding:16px; margin:20px; }
 }
+
+.result-image {
+  margin-top: 16px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}

@@ -41,6 +41,39 @@ const combinationMap = {
 "Environment|Quantum Physics": "Environment + Quantum Physics: Quantum-based catalytic materials designed for ultra-efficient purification of water and air pollutants."
 };
 
+// --- image map: everyday + science -> image path ---
+const imageMap = {
+  "Architecture|AI": "image/Architecture_AI.png",
+  "Architecture|AR": "image/Architecture_AR.png",
+  "Architecture|Robotics": "image/Architecture_Robotics.png",
+  "Architecture|Neuroscience": "image/Architecture_Neuro.png",
+  "Architecture|Quantum Physics": "image/Architecture_Quantum.png",
+
+  "Education|AI": "image/Education_AI.png",
+  "Education|AR": "image/Education_AR.png",
+  "Education|Robotics": "image/Education_Robotics.png",
+  "Education|Neuroscience": "image/Education_Neuro.png",
+  "Education|Quantum Physics": "image/Education_Quantum.png",
+
+  "Fashion|AI": "image/Fashion_AI.png",
+  "Fashion|AR": "image/Fashion_AR.png",
+  "Fashion|Robotics": "image/Fashion_Robotics.png",
+  "Fashion|Neuroscience": "image/Fashion_Neuro.png",
+  "Fashion|Quantum Physics": "image/Fashion_Quantum.jpg",
+
+  "Music|AI": "image/Music_AI.jpg",
+  "Music|AR": "image/Music_AR.jpg",
+  "Music|Robotics": "image/Music_Robotics.jpg",
+  "Music|Neuroscience": "image/Music_Neuro.jpg",
+  "Music|Quantum Physics": "image/Music_Quantum.jpg",
+
+  "Environment|AI": "image/Environment_AI.jpg",
+  "Environment|AR": "image/Environment_AR.jpg",
+  "Environment|Robotics": "image/Environment_Robotics.jpg",
+  "Environment|Neuroscience": "image/Environment_Neuro.jpg",
+  "Environment|Quantum Physics": "image/Environment_Quantum.jpg"
+};
+
 // --- UI handlers ---
 const startBtn = document.getElementById("start-btn");
 const screens = {
@@ -106,7 +139,13 @@ function generateResult(){
   }
   const key = `${selectedEveryday}|${selectedScience}`;
   const idea = combinationMap[key] || `${selectedScience} + ${selectedEveryday}: A creative fusion idea.`;
+  const imagePath = imageMap[key] || "image/default.png";
+  
   resultTextEl.innerText = `${idea}`;
+
+  const resultImageEl = document.getElementById("result-image");
+  resultImageEl.src = imagePath;
+  resultImageEl.alt = `${selectedEveryday} and ${selectedScience}`;
 }
 
 // again = random new pairing (same everyday, random science)
