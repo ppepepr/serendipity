@@ -100,8 +100,26 @@ button{
   display:flex;
   align-items:center;
   justify-content:center;
+  gap:16px; /*text와 image 사이 간격*/
+  flex-direction: row; /*기본 나란히*/
 }
 #result-text{ font-size:16px; color:#111827; line-height:1.5; margin:0; padding:0 8px; }
+
+/* 모바일 환경에서 세로로 변경 */
+@media (max-width:520px){
+  .result-card{
+    flex-direction: column; /* 세로 정렬 */
+  }
+
+  #result-text{
+    text-align:center; /* 중앙 정렬 */
+  }
+  
+  .result-image{
+    max-width:90%;
+    max-height:240px;
+  }
+}
 
 /* layout */
 .row{ display:flex; gap:12px; justify-content:center; margin-top:18px; }
@@ -122,10 +140,4 @@ button{
   display: block;
 }
 
-@media (max-width: 520px) {
-  .result-image {
-    max-width: 90%;
-    max-height: 240px;
-  }
-}
 
