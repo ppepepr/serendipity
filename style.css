@@ -88,9 +88,12 @@ button{
 }
 
 .result-image {
-  margin-top: 16px;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  max-width: 480px;
+  max-height: 300px; /* ✅ 최대 높이 제한 */
+  object-fit: cover; /* ✅ 비율 유지하면서 잘라냄 */
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin: 16px auto 0;
+  display: block;
 }
+
